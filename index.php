@@ -1,8 +1,7 @@
 <?php
-	/* Database connection settings */
 	include "blocks/db_connect.php"; 
 
-	$sql = "SELECT * FROM `usd2byn` ";
+	$sql = "SELECT * FROM `usd2byn`";
     $result = mysqli_query($mysqlLink, $sql);
 
 	while ($row = mysqli_fetch_array($result)) {

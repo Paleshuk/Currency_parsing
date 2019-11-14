@@ -16,10 +16,10 @@ foreach ($courses as $course) {
 }
 
 if (!$mysqlLink) {
-      die("Connection failed: " . mysqli_connect_error());
+      die("<h1>Connection failed: </h1>" . mysqli_connect_error());
 }
  
-echo "Connected successfully!";
+echo "<h1>Connected successfully!</h1>";
 echo "<br><br>";
 
 $date = date("Y-m-d H:i:s");
@@ -28,9 +28,9 @@ $sql = "INSERT INTO usd2byn (`id`, `course`, `date`)
 		VALUES (NULL, '{$course_curr}', '{$date}')";
 
 if (mysqli_query($mysqlLink, $sql)) {
-      echo "New record created successfully!";
+      echo "<h1>New record created successfully!</h1>";
 } else {
-      echo "Error: " . $sql . "<br>" . mysqli_error($mysqlLink);
+      echo "<h1>Error: </h1>" . $sql . "<br>" . mysqli_error($mysqlLink);
 }
 
 mysqli_close($mysqlLink);

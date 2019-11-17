@@ -1,6 +1,6 @@
 <?php
 
-$mysqlLink = mysqli_connect('127.0.0.1', 'admin_current', '123123', 'Currency');
+$mysqlLink = mysqli_connect('localhost', 'root', 'root', 'Currency');
 
 mysqli_query($mysqlLink, "SET NAMES utf8");
 
